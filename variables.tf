@@ -28,12 +28,12 @@ EOT
     name                           = string
     protocol                       = string
     backend_address_pool_ids       = optional(list(string))
-    disable_outbound_snat          = optional(bool, false)
+    disable_outbound_snat          = optional(bool) # Default: false
     enable_floating_ip             = optional(bool)
     enable_tcp_reset               = optional(bool)
     floating_ip_enabled            = optional(bool)
-    idle_timeout_in_minutes        = optional(number, 4)
-    load_distribution              = optional(string, "Default")
+    idle_timeout_in_minutes        = optional(number) # Default: 4
+    load_distribution              = optional(string) # Default: "Default"
     probe_id                       = optional(string)
     tcp_reset_enabled              = optional(bool)
   }))
